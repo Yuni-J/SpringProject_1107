@@ -1,0 +1,5 @@
+-- 24.11.06
+-- CREATE USER 'springUser'@'localhost' IDENTIFIED BY 'mysql';  --이미 있음
+CREATE DATABASE myspringdb;
+GRANT ALL PRIVILEGES ON myspringdb.* TO 'springUser'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
