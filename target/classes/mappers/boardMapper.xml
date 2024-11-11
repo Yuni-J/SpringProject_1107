@@ -22,7 +22,7 @@
  		select * from board where bno = #{bno}
  	</select>
  	
- 	<update id="update">
+ 	<update id="modify">
  		update board set title=#{title}, content=#{content}
  		where bno=#{bno}
  	</update>
@@ -59,6 +59,25 @@
  			</trim>
  		</if>
  	</sql>
+ 	
+ 	<select id="getOneBno" resultType="long">
+ 		select max(bno) from board
+ 	</select>
+ 	
+ 	<update id="readCountUp">
+ 		update board set read_count = read_count + 1
+ 		where bno = #{bno}
+ 	</update>
+ 	
+ 	<update id="cmtQtyUpdate">
+ 		update board set cmt_qty = cmt_qty + #{cnt}
+ 		where bno = #{bno}
+ 	</update>
+ 	
+ 	<update id="hasFileUpdate">
+ 		update board set has_file = has_file + #{cnt}
+ 		where bno = #{bno}
+ 	</update>
  	
  
  </mapper>

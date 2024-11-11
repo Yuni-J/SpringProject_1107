@@ -33,8 +33,25 @@
 			  	</div>			      
 			</li>
 		</ul>
+		
+		<!-- 첨부파일 입력 라인 추가 -->
+		<div class="mb-3">
+		  <label for="file" class="form-label"></label>
+		  <input type="file" class="form-control" name="files" id="file" 
+		  multiple="multiple" style="display:none">
+		  <button type="button" class="btn btn-outline-info btn-sm" id="trigger">FileUpload...</button>
+		</div>
+		
+		<!-- 첨부파일 표시 라인 추가 -->
+		<div class="mb-3" id="fileZone">
+
+		</div>
+		
 		<button type="submit" class="btn btn-primary" id="regBtn">등록</button>
 	</form>
 </div>
+
+<script type="text/javascript" src="/resources/js/boardFileRegister.js"></script>
+
 
 <jsp:include page="../layout/footer.jsp" />
