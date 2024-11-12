@@ -4,7 +4,6 @@
 
 <jsp:include page = "layout/header.jsp" />
 
-<P>  The time on the server is ${serverTime}. </P>
 
 <script>
 	let modify_msg = `<c:out value="${modify_msg}" />`;

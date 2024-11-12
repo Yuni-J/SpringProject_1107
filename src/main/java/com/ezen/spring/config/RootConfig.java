@@ -32,7 +32,7 @@ public class RootConfig {
 		//log4jdbc 드라이버 => DB의 흐름으로 로그로 찍어주는 드라이버.
 		// springdb / springUser / mysql
 		hikariConfig.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
-		hikariConfig.setJdbcUrl("jdbc:log4jdbc:mysql://localhost:3306/springdb2");
+		hikariConfig.setJdbcUrl("jdbc:log4jdbc:mysql://localhost:3306/myspringdb");
 		hikariConfig.setUsername("springUser");
 		hikariConfig.setPassword("mysql");
 		

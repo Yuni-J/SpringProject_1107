@@ -7,7 +7,7 @@
 <div class="container-md">
 	<h1> 회원가입 </h1>
 	<hr>
-	<br><br>
+	<br>
 	<div class="d-flex justify-content-center">
 		<form action="/user/register" method="post" class="w-50">
 			<div class="d-flex align-items-center form-control">
@@ -29,10 +29,117 @@
 				</svg>
 				<input type="text" class="form-control" id="n" name="nickName" placeholder="닉네임" style="height: 60px; border: none;">
 			</div>
+			<br>
 			<button type="submit" class="form-control btn btn-primary" style="height: 50px;">회원가입</button>
 		</form>
 	</div>
 
 </div>
-
+<br>
 <jsp:include page="../layout/footer.jsp" />
+
+<style>
+/* 전체 컨테이너 */
+.container-md {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 제목 */
+h1 {
+    color: #6f42c1;  /* 보라색 */
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 구분선 */
+hr {
+    border-color: #6f42c1;
+    border-width: 2px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* 입력 필드 컨테이너 */
+.d-flex.align-items-center {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* 입력 필드 */
+.form-control {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    padding-left: 35px; /* 아이콘과 텍스트 간격 */
+    height: 60px;
+    width: 100%;
+    color: #333;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #6f42c1;
+    box-shadow: 0 0 5px rgba(111, 66, 193, 0.5);
+}
+
+/* 아이콘 */
+.bi {
+    position: absolute;
+    left: 10px;
+    color: #6f42c1;
+}
+
+/* 회원가입 버튼 */
+button[type="submit"] {
+    background-color: #6f42c1;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #5a33a1;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container-md {
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-control {
+        font-size: 1rem;
+        padding-left: 30px; /* 아이콘과 텍스트 간격 */
+    }
+
+    button[type="submit"] {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+</style>

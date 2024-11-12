@@ -83,3 +83,172 @@
 </div>
 
 <jsp:include page="../layout/footer.jsp" />
+
+<style>
+/* 전체 컨테이너 스타일 */
+/* .container-md {
+    background-color: #f9f9f9; /* 배경색을 밝은 색으로 설정 */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+} */
+.container-md {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 제목 */
+h1 {
+    color: #6f42c1;  /* 제목 색상 */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* 구분선 */
+hr {
+    border-color: #6f42c1;
+    border-width: 2px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* 입력 필드 스타일 */
+input[type="text"], textarea {
+    background-color: #f1f1f1; /* 배경색 변경 */
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* 글 작성 필드 스타일 */
+#cmtListArea {
+    margin-bottom: 20px;
+}
+
+/* 첨부파일 입력 버튼 */
+#trigger {
+    background-color: #6f42c1;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#trigger:hover {
+    background-color: #5a33a1;  /* 버튼 hover 색상 */
+}
+
+/* 첨부파일 표시 영역 */
+#fileZone {
+    margin-top: 10px;
+}
+
+#fileZone span {
+    font-size: 14px;
+    color: #333;
+    padding: 5px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#fileZone span a {
+    color: #6f42c1;
+    text-decoration: none;
+}
+
+#fileZone span a:hover {
+    text-decoration: underline;
+}
+
+/* 파일 리스트 스타일 */
+.list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.list-group-item img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+/* 파일 삭제 버튼 스타일 */
+.btn-outline-danger {
+    border-radius: 50%;
+    padding: 5px 10px;
+    background-color: #e03e3e;
+    color: white;
+    font-size: 0.9rem;
+    border: none;
+}
+
+.btn-outline-danger:hover {
+    background-color: #c92a2a;
+}
+
+/* 수정 버튼 */
+#regBtn {
+    background-color: #6f42c1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#regBtn:hover {
+    background-color: #5a33a1;
+}
+
+/* list 버튼 */
+a button {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+a button:hover {
+    background-color: #e2e6ea;
+}
+
+/* 폼 필드 내부 마진 및 스타일링 */
+input.form-control, textarea.form-control {
+    margin-bottom: 10px;
+}
+
+/* 파일 업로드 input (hidden) */
+input[type="file"] {
+    display: none;
+}
+
+</style>

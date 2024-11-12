@@ -50,7 +50,7 @@
 						</c:otherwise>
 					</c:choose>
 					<div class="fw-bold">${fvo.fileName }</div>
-					<span class="badge text-bg-primary rounded-pill">${fvo.regDate } / ${fvo.fileSize } Btyes</span>
+					<span class="badge text-bg-light rounded-pill">${fvo.regDate } / ${fvo.fileSize } Btyes</span>
 				</li>
 			</c:forEach>
 		</ul>
@@ -127,5 +127,173 @@
 	</script>
 
 </div>
-
+<br>
 <jsp:include page="../layout/footer.jsp" />
+
+<style>
+/* 전체 컨테이너 스타일 */
+/* .container-md {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+} */
+.container-md {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 제목 */
+h1 {
+    color: #6f42c1;  /* 제목 색상 */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* HR 선 */
+hr {
+    border-color: #6f42c1;
+    border-width: 2px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* 읽기 전용 입력 필드 */
+input[type="text"], textarea {
+    background-color: #f1f1f1; /* 배경색 변경 */
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* 파일 리스트 */
+.list-group-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 파일 다운로드 버튼 스타일 */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 댓글 입력란 */
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* 댓글 목록 */
+.list-group-item {
+    margin-bottom: 15px;
+}
+
+.fw-bold {
+    font-weight: bold;
+    color: #333;
+}
+
+/* 댓글 작성자 이름 */
+#cmtWriter {
+    font-weight: bold;
+    color: #6f42c1;
+}
+
+/* 댓글 작성 버튼 */
+#cmtAddBtn {
+    background-color: #6f42c1;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#cmtAddBtn:hover {
+    background-color: #5a33a1;  /* 버튼 hover 색상 */
+}
+
+/* 댓글 더보기 버튼 */
+#moreBtn {
+    margin-top: 20px;
+}
+
+/* 댓글 모달 */
+.modal-content {
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.modal-header {
+    border-bottom: 2px solid #6f42c1;
+}
+
+.modal-footer {
+    border-top: 2px solid #6f42c1;
+}
+
+/* 댓글 수정 모달 */
+#cmtTextMod {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* 수정 및 삭제 버튼 스타일 */
+a button {
+    background-color: #6f42c1; /* 메인 색상 */
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 8px 12px; /* 버튼 크기 줄임 */
+    font-size: 0.9rem;  /* 폰트 크기 조정 */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    margin-right: 8px; /* 버튼 간격을 좀 더 좁힘 */
+}
+
+a button:hover {
+    background-color: #5a33b1;  /* 호버 시 색상 */
+    transform: scale(1.05);  /* 살짝 커지는 효과 */
+}
+
+/* 삭제 버튼에 다른 스타일 적용 */
+a button:nth-child(2) {
+    background-color: #e74c3c; /* 삭제 버튼은 빨간색 */
+}
+
+a button:nth-child(2):hover {
+    background-color: #c0392b; /* 호버 시 색상 */
+    transform: scale(1.05);  /* 살짝 커지는 효과 */
+}
+
+/* 버튼 안 텍스트는 중앙 정렬 */
+a button span {
+    display: block;
+    text-align: center;
+}
+
+
+</style>
