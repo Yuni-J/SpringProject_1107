@@ -75,19 +75,22 @@ function spreadCommentList(bno, page=1){
 document.addEventListener('click', (e)=>{
     //내가 클릭한 버튼의 객체를 모달창으로 전달
     if(e.target.classList.contains('mod')){
-        
-        let li = e.target.closest('li');    // closest : 가장 가까운(나를 포함한) 태그 (=> 부모태그)
-        let cmtText = li.querySelector('.fw-bold').innerText;   // nextSibling : 한 부모 안에서의 다음 형제 값 찾기
+        // 내가 클릭한 버튼의 li 가져오기
+        //closest : 가장 가까운(나를 포함한) 태그 (부모태그)
+        let li = e.target.closest('li');
+        //nextSibling : 한 부모 안에서의 다음 형제 값 찾기
+        let cmtText = li.querySelector('.fw-bold').nextSibling;
         console.log(cmtText);
         document.getElementById('cmtTextMod').value = cmtText.nodeValue;
-
-        let cmtWriter = li.querySelector('.fw-bold').innerText = `No.${cno} | ${cmtWriter}`;
-        // cmtModBtn => cno 값을 dataset으로 담기
-        document.getElementById('cmtModBtn').setAttribute("data-cno", cno);
+        let cno = li.dataset.cno;
+        let cmtWriter = li.querySelector('.fw-bold').innerText;
+        document.getElementById('cmtWriterMod').innerHTML = `no.${cno}  <b>${cmtWriter}</b>`;  
+        //cmtModBtn => cno 값을 dataset으로 달기
+        document.getElementById('cmtModBtn').setAttribute("data-cno",cno);
     }
     if(e.target.id == 'cmtModBtn'){
         let cmtData = {
-            cno: e.target.dateset.cno,
+            cno: e.target.dataset.cno,
             content: document.getElementById('cmtTextMod').value
         }
         console.log(cmtData);
